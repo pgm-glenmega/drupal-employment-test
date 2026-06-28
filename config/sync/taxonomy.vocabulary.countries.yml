@@ -1,0 +1,9 @@
+uuid: 9e1cf71c-d057-4672-ab52-9b7d0abed4c7
+langcode: en
+status: true
+dependencies: {  }
+name: Countries
+vid: countries
+description: 'Countries used to classify office locations.'
+weight: 0
+new_revision: false
