@@ -1,0 +1,19 @@
+uuid: cb6f2639-2730-4feb-a97d-9f28910363a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.news
+id: node.news.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: news
+label: Teaser
+description: 'Short summary displayed on News overview cards.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

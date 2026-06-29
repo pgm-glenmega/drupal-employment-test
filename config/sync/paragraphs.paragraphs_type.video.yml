@@ -1,0 +1,10 @@
+uuid: 031450e9-d65d-4f80-842b-9c66899a895f
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+icon_default: null
+description: 'Embedded YouTube or Vimeo video.'
+behavior_plugins: {  }

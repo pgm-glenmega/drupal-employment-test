@@ -1,0 +1,10 @@
+uuid: 3641d257-370b-4c1d-a086-353a1f60e89b
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+icon_uuid: null
+icon_default: null
+description: 'Reusable formatted text content block.'
+behavior_plugins: {  }

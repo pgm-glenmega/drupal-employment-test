@@ -1,0 +1,17 @@
+uuid: 15e8d7dd-6113-4db1-a769-75aecd8ccb68
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: News
+type: news
+description: 'News items displayed on the news overview and detail pages.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

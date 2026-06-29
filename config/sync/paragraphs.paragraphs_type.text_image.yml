@@ -1,0 +1,10 @@
+uuid: a56e4bf5-8e4c-4fd2-9eff-7e66ee673589
+langcode: en
+status: true
+dependencies: {  }
+id: text_image
+label: 'Text + Image'
+icon_uuid: null
+icon_default: null
+description: 'Formatted text with an image positioned to the left or right.'
+behavior_plugins: {  }
