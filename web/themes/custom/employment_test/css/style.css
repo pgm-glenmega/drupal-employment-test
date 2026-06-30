@@ -76,8 +76,16 @@ p {
 }
 
 .site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
   border-bottom: 1px solid #dce1e7;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(0.75rem);
+}
+
+body.toolbar-fixed .site-header {
+  top: var(--drupal-displace-offset-top, 0);
 }
 
 .site-header__inner {
@@ -85,6 +93,7 @@ p {
   flex-direction: column;
   gap: 1rem;
   padding-block: 1rem;
+  transition: gap 180ms ease, padding 180ms ease;
 }
 
 .site-header__branding {
@@ -106,6 +115,7 @@ p {
 .site-logo img {
   width: 2.75rem;
   height: 2.75rem;
+  transition: width 180ms ease, height 180ms ease;
 }
 
 .site-name {
@@ -141,6 +151,7 @@ p {
   color: #20242c;
   font-weight: 600;
   text-decoration: none;
+  transition: color 180ms ease, background-color 180ms ease, padding 180ms ease;
 }
 
 .site-header__navigation .menu a:hover,
@@ -153,6 +164,20 @@ p {
 .site-header__navigation .menu a[aria-current=page] {
   background: #f5f7fa;
   color: #005ea8;
+}
+
+.site-header.is-scrolled .site-header__inner {
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.site-header.is-scrolled .site-logo img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.site-header.is-scrolled .site-header__navigation .menu a {
+  padding-block: 0.45rem;
 }
 
 @media (min-width: 48rem) {
@@ -168,6 +193,17 @@ p {
   }
   .site-header__navigation .menu {
     justify-content: flex-end;
+  }
+  .site-header.is-scrolled .site-header__inner {
+    gap: 1.5rem;
+    padding-block: 0.625rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header__inner,
+  .site-logo img,
+  .site-header__navigation .menu a {
+    transition: none;
   }
 }
 .site {
