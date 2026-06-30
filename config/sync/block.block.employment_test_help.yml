@@ -1,0 +1,22 @@
+uuid: b1671bce-ffdb-4ea4-a1f7-8f29d79c04a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - employment_test
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: employment_test_help
+theme: employment_test
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

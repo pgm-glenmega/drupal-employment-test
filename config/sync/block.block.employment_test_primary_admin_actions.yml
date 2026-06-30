@@ -1,0 +1,20 @@
+uuid: 62e6544e-f068-4ed8-876c-a106ca19c5c9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - employment_test
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: employment_test_primary_admin_actions
+theme: employment_test
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

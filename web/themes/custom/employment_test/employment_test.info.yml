@@ -1,0 +1,27 @@
+name: "Employment Test"
+type: theme
+"base theme": stable9
+version: 1.0.0
+libraries:
+  - employment_test/base
+  - employment_test/messages
+  - employment_test/global
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - employment_test/user
+  core/drupal.dropbutton:
+    - employment_test/dropbutton
+  core/drupal.dialog:
+    - employment_test/dialog
+  file/drupal.file:
+    - employment_test/file
+  core/drupal.item-list:
+    - employment_test/item-list
+  core/drupal.progress:
+    - employment_test/progress
+  core/drupal.tablesort:
+    - employment_test/drupal.tablesort
+description: ""
+core_version_requirement: ^11
+generator: "starterkit_theme:11.3.13"

@@ -1,0 +1,22 @@
+uuid: ecbebc52-dbc7-4989-825a-31ff71a7c246
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - employment_test
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: employment_test_powered
+theme: employment_test
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,19 @@
+{
+  "name": "drupal-employment-test",
+  "version": "1.0.0",
+  "description": "Frontend build tools for the Employment Test Drupal theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass web/themes/custom/employment_test/scss/style.scss web/themes/custom/employment_test/css/style.css --style=expanded --no-source-map",
+    "watch:css": "sass --watch web/themes/custom/employment_test/scss/style.scss:web/themes/custom/employment_test/css/style.css --style=expanded --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

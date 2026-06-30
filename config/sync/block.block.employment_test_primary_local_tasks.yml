@@ -1,0 +1,22 @@
+uuid: b70c8ea5-1cf6-4486-898b-22aebbff56a0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - employment_test
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: employment_test_primary_local_tasks
+theme: employment_test
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

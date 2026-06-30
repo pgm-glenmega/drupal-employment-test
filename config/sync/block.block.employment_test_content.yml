@@ -1,0 +1,22 @@
+uuid: a7ea30fa-72b2-4399-a82a-494ccd82bd1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - employment_test
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: employment_test_content
+theme: employment_test
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
