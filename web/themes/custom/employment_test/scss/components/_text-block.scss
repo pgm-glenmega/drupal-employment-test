@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+.text-block {
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.text-block__content > :last-child {
+  margin-bottom: 0;
+}

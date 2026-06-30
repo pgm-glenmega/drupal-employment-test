@@ -240,6 +240,15 @@ body.toolbar-fixed .site-header {
     padding-block: 5rem;
   }
 }
+.text-block {
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.text-block__content > :last-child {
+  margin-bottom: 0;
+}
+
 .text-image {
   display: grid;
   gap: 1.5rem;
