@@ -240,3 +240,27 @@ body.toolbar-fixed .site-header {
     padding-block: 5rem;
   }
 }
+.text-image {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.text-image__content > :last-child {
+  margin-bottom: 0;
+}
+
+.text-image__media img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 48rem) {
+  .text-image {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+  .text-image--left .text-image__media {
+    order: -1;
+  }
+}
