@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as *;
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1;
+  padding-block: 3rem;
+}
+
+.site-header__inner,
+.site-notifications,
+.site-help,
+.site-breadcrumbs,
+.site-main__inner,
+.site-footer__inner {
+  width: min(
+    calc(100% - (2 * #{$container-padding-mobile})),
+    $container-max-width
+  );
+  margin-inline: auto;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .site-header__inner,
+  .site-notifications,
+  .site-help,
+  .site-breadcrumbs,
+  .site-main__inner,
+  .site-footer__inner {
+    width: min(
+      calc(100% - (2 * #{$container-padding-desktop})),
+      $container-max-width
+    );
+  }
+
+  .site-main {
+    padding-block: 5rem;
+  }
+}
