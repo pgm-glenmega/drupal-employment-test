@@ -7,54 +7,54 @@
 
 <div class="site">
 
-  <header class="site-header" role="banner">
-    <div class="site-header__inner">
-      {% if page.header %}
-        <div class="site-header__branding">
-          {{ page.header }}
-        </div>
-      {% endif %}
+	<header class="site-header" role="banner">
+		<div class="site-header__inner">
+			{% if page.header %}
+				<div class="site-header__branding">
+					{{ page.header }}
+				</div>
+			{% endif %}
 
-      {% if page.primary_menu %}
-        <nav class="site-header__navigation" aria-label="{{ 'Main navigation'|t }}">
-          {{ page.primary_menu }}
-        </nav>
-      {% endif %}
-    </div>
-  </header>
+			{% if page.primary_menu %}
+				<div class="site-header__navigation">
+					{{ page.primary_menu }}
+				</div>
+			{% endif %}
+		</div>
+	</header>
 
-  {% if page.highlighted %}
-    <div class="site-notifications">
-      {{ page.highlighted }}
-    </div>
-  {% endif %}
+	{% if page.highlighted %}
+		<div class="site-notifications">
+			{{ page.highlighted }}
+		</div>
+	{% endif %}
 
-  {% if page.help %}
-    <div class="site-help">
-      {{ page.help }}
-    </div>
-  {% endif %}
+	{% if page.help %}
+		<div class="site-help">
+			{{ page.help }}
+		</div>
+	{% endif %}
 
-  {% if page.breadcrumb %}
-    <div class="site-breadcrumbs">
-      {{ page.breadcrumb }}
-    </div>
-  {% endif %}
+	{% if page.breadcrumb %}
+		<div class="site-breadcrumbs">
+			{{ page.breadcrumb }}
+		</div>
+	{% endif %}
 
-  <main class="site-main" role="main">
-    <a id="main-content" tabindex="-1"></a>
+	<main class="site-main" role="main">
+		<a id="main-content" tabindex="-1"></a>
 
-    <div class="site-main__inner">
-      {{ page.content }}
-    </div>
-  </main>
+		<div class="site-main__inner">
+			{{ page.content }}
+		</div>
+	</main>
 
-  {% if page.footer %}
-    <footer class="site-footer" role="contentinfo">
-      <div class="site-footer__inner">
-        {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
+	{% if page.footer %}
+		<footer class="site-footer" role="contentinfo">
+			<div class="site-footer__inner">
+				{{ page.footer }}
+			</div>
+		</footer>
+	{% endif %}
 
 </div>
