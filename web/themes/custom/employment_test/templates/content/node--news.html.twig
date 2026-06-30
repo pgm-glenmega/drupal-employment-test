@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override for the full News node.
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type-news',
+    'news-detail',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if content.field_hero_image %}
+    <div class="news-detail__hero">
+      {{ content.field_hero_image }}
+    </div>
+  {% endif %}
+
+  {% if content.field_content_components %}
+    <div class="news-detail__components">
+      {{ content.field_content_components }}
+    </div>
+  {% endif %}
+</article>
