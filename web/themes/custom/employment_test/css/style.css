@@ -273,3 +273,22 @@ body.toolbar-fixed .site-header {
     order: -1;
   }
 }
+.video-block {
+  width: 100%;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.video-block__media {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #000000;
+}
+
+.video-block__media iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 0;
+}

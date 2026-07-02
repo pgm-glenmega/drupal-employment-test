@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override for the Video Paragraph.
+ */
+#}
+
+{# classes for the paragraph container #}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--video',
+  'video-block',
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+] %}
+
+{# apply my classes next to the default classes drupal adds to the paragraph container #}
+<div{{ attributes.addClass(classes) }}>
+  <div class="video-block__media">
+    {{ content.field_video }}
+  </div>
+</div>
