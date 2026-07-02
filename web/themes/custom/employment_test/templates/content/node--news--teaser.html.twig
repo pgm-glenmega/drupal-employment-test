@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme override for a News node displayed as a teaser card.
+ */
+#}
+
+{% set classes = [
+  'node',
+  'node--type-news',
+  'news-card',
+  'node--view-mode--teaser',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+  {% if content.field_hero_image %}
+    <a class="news-card__image" href="{{ url }}">
+      {{ content.field_hero_image }}
+    </a>
+  {% endif %}
+
+  <div class="news-card__content">
+    {{ title_prefix }}
+
+    {% if not page %}
+      <h2 class="news-card__title">
+        <a href="{{ url }}">{{ label }}</a>
+      </h2>
+    {% endif %}
+
+    {{ title_suffix }}
+
+    {% if content.field_teaser %}
+      <div class="news-card__teaser">
+        {{ content.field_teaser }}
+      </div>
+    {% endif %}
+
+    <a class="news-card__link" href="{{ url }}">
+      {{ 'Read more'|t }}
+    </a>
+  </div>
+</article>

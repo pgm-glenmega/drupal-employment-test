@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+
+.news-card {
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: 0.75rem;
+  background: $color-background;
+}
+
+.news-card__image {
+  display: block;
+  overflow: hidden;
+  background: $color-surface;
+}
+
+.news-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 200ms ease;
+}
+
+.news-card__image:hover img,
+.news-card__image:focus-visible img {
+  transform: scale(1.025);
+}
+
+.news-card__content {
+  padding: 1.5rem;
+}
+
+.news-card__title {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.news-card__title a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+.news-card__title a:hover,
+.news-card__title a:focus-visible {
+  color: $color-link;
+  text-decoration: underline;
+}
+
+.news-card__teaser {
+  color: $color-text-muted;
+}
+
+.news-card__teaser > :last-child {
+  margin-bottom: 0;
+}
+
+.news-card__link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-card__image img {
+    transition: none;
+  }
+}
