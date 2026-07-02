@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+.view-news-overview .view-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.view-news-overview .views-row {
+  display: flex;
+  min-width: 0;
+}
+
+.view-news-overview .news-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.view-news-overview .news-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.view-news-overview .news-card__link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .view-news-overview .view-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .view-news-overview .view-content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
