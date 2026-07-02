@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+
+/*
+ * Page title
+ */
+
+.block-page-title-block {
+  max-width: 60rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  margin-bottom: 0;
+}
+
+/*
+ * News article
+ */
+
+.news-detail {
+  display: grid;
+  gap: 3rem;
+}
+
+/*
+ * Hero image
+ */
+
+.news-detail__hero {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: $color-surface;
+}
+
+.news-detail__hero img {
+  width: 100%;
+  height: auto;
+  max-height: 34rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*
+ * Paragraph component list
+ */
+
+.news-detail__components > .field > .field__items {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .block-page-title-block {
+    margin-bottom: 3rem;
+  }
+
+  .news-detail {
+    gap: 5rem;
+  }
+
+  .news-detail__components > .field > .field__items {
+    gap: 5rem;
+  }
+}
