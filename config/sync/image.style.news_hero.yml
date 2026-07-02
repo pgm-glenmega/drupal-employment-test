@@ -1,0 +1,17 @@
+uuid: 9b6f9175-5b6b-466c-8560-87d0260eb6db
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: news_hero
+label: 'News hero'
+effects:
+  35fa077e-907f-4cdd-ba75-6c592a3569f4:
+    uuid: 35fa077e-907f-4cdd-ba75-6c592a3569f4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 675
+      crop_type: focal_point

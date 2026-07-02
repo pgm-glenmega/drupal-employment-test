@@ -323,10 +323,9 @@ body.toolbar-fixed .site-header {
 }
 
 .news-detail__hero img {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 34rem;
-  object-fit: cover;
 }
 
 /*

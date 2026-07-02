@@ -33,11 +33,9 @@
 }
 
 .news-detail__hero img {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 34rem;
-  object-fit: cover;
-  object-position: center;
 }
 
 /*
