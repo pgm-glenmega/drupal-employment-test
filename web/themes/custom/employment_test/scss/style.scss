@@ -5,8 +5,10 @@
 @use "components/text-block";
 @use "components/text-image";
 @use "components/video-block";
-@use "pages/news-detail";
 @use "pages/news-overview";
+@use "pages/news-detail";
+@use "pages/offices-overview";
 @use "pages/office-detail";
+@use "components/office-card";
 
 @use "components/news-card";

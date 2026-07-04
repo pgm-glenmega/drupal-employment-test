@@ -1,0 +1,50 @@
+uuid: a373d760-64af-4df2-b0ba-64e44d78378e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.offices.field_address
+    - field.field.node.offices.field_content_components
+    - field.field.node.offices.field_country
+    - field.field.node.offices.field_office_image
+    - image.style.news_hero
+    - node.type.offices
+  module:
+    - image
+    - user
+id: node.offices.teaser
+targetEntityType: node
+bundle: offices
+mode: teaser
+content:
+  field_address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_office_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: news_hero
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_content_components: true
+  links: true

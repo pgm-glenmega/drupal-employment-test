@@ -293,6 +293,45 @@ body.toolbar-fixed .site-header {
   border: 0;
 }
 
+.view-news-overview .view-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.view-news-overview .views-row {
+  display: flex;
+  min-width: 0;
+}
+
+.view-news-overview .news-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.view-news-overview .news-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.view-news-overview .news-card__link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .view-news-overview .view-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+@media (min-width: 64rem) {
+  .view-news-overview .view-content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 /*
  * Page title
  */
@@ -347,42 +386,83 @@ body.toolbar-fixed .site-header {
     gap: 5rem;
   }
 }
-.view-news-overview .view-content {
+.view-offices-overview,
+.view-id-offices_overview {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.view-offices-overview .view-filters,
+.view-id-offices_overview .view-filters {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.view-offices-overview .views-exposed-form,
+.view-id-offices_overview .views-exposed-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+}
+
+.view-offices-overview .form-item,
+.view-id-offices_overview .form-item {
+  display: grid;
+  gap: 0.375rem;
+  margin: 0;
+}
+
+.view-offices-overview label,
+.view-id-offices_overview label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.view-offices-overview select,
+.view-id-offices_overview select {
+  min-width: 14rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.625rem;
+  background: #ffffff;
+  color: #111827;
+}
+
+.view-offices-overview .form-actions,
+.view-id-offices_overview .form-actions {
+  margin: 0;
+}
+
+.view-offices-overview .form-submit,
+.view-id-offices_overview .form-submit {
+  padding: 0.675rem 1rem;
+  border: 0;
+  border-radius: 0.625rem;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.view-offices-overview .view-content,
+.view-id-offices_overview .view-content {
+  display: grid;
   gap: 1.5rem;
 }
 
-.view-news-overview .views-row {
-  display: flex;
-  min-width: 0;
-}
-
-.view-news-overview .news-card {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-
-.view-news-overview .news-card__content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.view-news-overview .news-card__link {
-  margin-top: auto;
-  padding-top: 1.25rem;
-}
-
 @media (min-width: 48rem) {
-  .view-news-overview .view-content {
+  .view-offices-overview .view-content,
+  .view-id-offices_overview .view-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
   }
 }
 @media (min-width: 64rem) {
-  .view-news-overview .view-content {
+  .view-offices-overview .view-content,
+  .view-id-offices_overview .view-content {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -433,6 +513,76 @@ body.toolbar-fixed .site-header {
 .office-detail__components > .field > .field__items {
   display: grid;
   gap: 2rem;
+}
+
+.office-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.25rem;
+  background: #ffffff;
+}
+
+.office-card__image {
+  display: block;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.office-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 180ms ease;
+}
+
+.office-card__image:hover img,
+.office-card__image:focus img {
+  transform: scale(1.04);
+}
+
+.office-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+.office-card__country {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.office-card__title {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.office-card__title a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.office-card__title a:hover,
+.office-card__title a:focus {
+  text-decoration: underline;
+}
+
+.office-card__address {
+  color: #4b5563;
+}
+
+.office-card__link {
+  margin-top: auto;
+  font-weight: 700;
+  color: #111827;
 }
 
 .news-card {

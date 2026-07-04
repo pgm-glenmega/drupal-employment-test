@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override for Office teaser cards.
+ */
+#}
+
+{% set classes = [
+  'node',
+  'node--type-offices',
+  'office-card',
+  'node--view-mode-teaser',
+] %}
+
+{% set office_title = node.label %}
+
+<article{{ attributes.addClass(classes) }}>
+  <a class="office-card__image" href="{{ url }}" aria-label="{{ 'View office: ' ~ office_title|e('html_attr') }}">
+    {{ content.field_office_image }}
+  </a>
+
+  <div class="office-card__content">
+    <div class="office-card__country">
+      {{ content.field_country }}
+    </div>
+
+    <h2 class="office-card__title">
+      <a href="{{ url }}">{{ office_title }}</a>
+    </h2>
+
+    <div class="office-card__address">
+      {{ content.field_address }}
+    </div>
+
+    <a class="office-card__link" href="{{ url }}">
+      View office
+    </a>
+  </div>
+</article>
