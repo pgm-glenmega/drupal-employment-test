@@ -386,6 +386,55 @@ body.toolbar-fixed .site-header {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+.office-detail {
+  display: grid;
+  gap: 2rem;
+}
+
+.office-detail__hero {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #f3f4f6;
+}
+
+.office-detail__hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.office-detail__meta {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.office-detail__country {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.office-detail__address {
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.office-detail__components {
+  display: grid;
+  gap: 2rem;
+}
+
+.office-detail__components > .field > .field__items {
+  display: grid;
+  gap: 2rem;
+}
+
 .news-card {
   overflow: hidden;
   border: 1px solid #dce1e7;

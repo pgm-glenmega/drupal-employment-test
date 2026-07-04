@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override for Office detail pages.
+ */
+#}
+
+{% set classes = [
+  'node',
+  'node--type-offices',
+  'office-detail',
+  'node--view-mode-full',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="office-detail__hero">
+    {{ content.field_office_image }}
+  </div>
+
+  <div class="office-detail__meta">
+    <div class="office-detail__country">
+      {{ content.field_country }}
+    </div>
+
+    <div class="office-detail__address">
+      {{ content.field_address }}
+    </div>
+  </div>
+
+  <div class="office-detail__components">
+    {{ content.field_content_components }}
+  </div>
+</article>

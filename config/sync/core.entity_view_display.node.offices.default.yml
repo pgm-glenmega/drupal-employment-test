@@ -1,0 +1,58 @@
+uuid: 7c6302b2-8938-4783-b240-13649c9f6b33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.offices.field_address
+    - field.field.node.offices.field_content_components
+    - field.field.node.offices.field_country
+    - field.field.node.offices.field_office_image
+    - image.style.news_hero
+    - node.type.offices
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.offices.default
+targetEntityType: node
+bundle: offices
+mode: default
+content:
+  field_address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_office_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: news_hero
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true
