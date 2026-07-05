@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for Basic page nodes.
+ */
+#}
+
+{% set classes = [
+  'node',
+  'node--type-page',
+  'basic-page',
+  'node--view-mode-full',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="basic-page__content">
+    {{ content.body }}
+  </div>
+
+  <div class="basic-page__links" aria-label="Project sections">
+    <a class="basic-page__link-card" href="/news">
+      <span>News</span>
+      <small>Read the latest news items.</small>
+    </a>
+
+    <a class="basic-page__link-card" href="/offices">
+      <span>Offices</span>
+      <small>Browse offices and filter them by country.</small>
+    </a>
+
+    <a class="basic-page__link-card" href="/articles">
+      <span>Articles</span>
+      <small>Explore articles connected to tags and offices.</small>
+    </a>
+
+    <a class="basic-page__link-card" href="/form/contact">
+      <span>Contact</span>
+      <small>Submit a message through the Webform contact form.</small>
+    </a>
+
+    <a class="basic-page__link-card" href="/hello-world">
+      <span>Hello World</span>
+      <small>View the custom controller page.</small>
+    </a>
+  </div>
+</article>
