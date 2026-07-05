@@ -1,0 +1,12 @@
+uuid: 5e5407bb-bbff-44a9-99a8-14041a1fe953
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  description: 'A Drupal employment test project featuring news, articles, offices, webforms, reusable components and custom Drupal functionality.'
+  title: '[current-page:title] | [site:name]'

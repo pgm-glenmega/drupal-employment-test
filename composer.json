@@ -23,7 +23,9 @@
         "drupal/core-recommended": "^11.3",
         "drupal/crop": "^2.6",
         "drupal/focal_point": "^2.1",
+        "drupal/metatag": "^2.2",
         "drupal/paragraphs": "^1.21",
+        "drupal/pathauto": "^1.15",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7"
     },

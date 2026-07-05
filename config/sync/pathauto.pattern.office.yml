@@ -1,0 +1,23 @@
+uuid: dab5f4bd-5dc4-4bbe-9d41-b8fa70fd7ca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offices
+  module:
+    - node
+id: office
+label: Office
+type: 'canonical_entities:node'
+pattern: '/offices/[node:title]'
+selection_criteria:
+  e84824fe-768f-465b-8a3a-007f1c5d6953:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      offices: offices
+selection_logic: and
+weight: -5
+relationships: {  }
