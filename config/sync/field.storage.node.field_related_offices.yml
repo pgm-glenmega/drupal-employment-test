@@ -1,0 +1,19 @@
+uuid: 9d56d6bc-e2f5-40f9-b57c-5d7f568b86e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_related_offices
+field_name: field_related_offices
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

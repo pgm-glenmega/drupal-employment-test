@@ -4,15 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.article.body
-    - field.field.node.article.comment
+    - field.field.node.article.field_content_components
     - field.field.node.article.field_image
+    - field.field.node.article.field_related_offices
     - field.field.node.article.field_tags
-    - image.style.medium
+    - field.field.node.article.field_teaser
+    - image.style.news_hero
     - node.type.article
   module:
     - image
-    - text
     - user
 _core:
   default_config_hash: O8PxzfG8DOHHRu6M23kwR6TDPq_MNfYQ10Mp367ICUQ
@@ -21,35 +21,34 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_image:
     type: image
     label: hidden
     settings:
-      image_link: content
-      image_style: medium
+      image_link: ''
+      image_style: news_hero
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: -1
+    weight: 0
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
-  links:
-    weight: 100
+  field_teaser:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
-  comment: true
+  field_content_components: true
+  field_related_offices: true
+  links: true

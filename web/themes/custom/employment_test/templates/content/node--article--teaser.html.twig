@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override for Article teaser cards.
+ */
+#}
+
+{% set classes = [
+  'node',
+  'node--type-article',
+  'article-card',
+  'node--view-mode-teaser',
+] %}
+
+{% set article_title = node.label %}
+
+<article{{ attributes.addClass(classes) }}>
+  <a class="article-card__image" href="{{ url }}" aria-label="{{ 'Read article: ' ~ article_title|e('html_attr') }}">
+    {{ content.field_image }}
+  </a>
+
+  <div class="article-card__content">
+    <div class="article-card__tags">
+      {{ content.field_tags }}
+    </div>
+
+    <h2 class="article-card__title">
+      <a href="{{ url }}">{{ article_title }}</a>
+    </h2>
+
+    <div class="article-card__teaser">
+      {{ content.field_teaser }}
+    </div>
+
+    <a class="article-card__link" href="{{ url }}">
+      Read article
+    </a>
+  </div>
+</article>

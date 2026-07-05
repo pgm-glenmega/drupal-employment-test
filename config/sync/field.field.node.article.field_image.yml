@@ -13,17 +13,17 @@ id: node.article.field_image
 field_name: field_image
 entity_type: node
 bundle: article
-label: Image
-description: ''
-required: false
+label: 'Hero image'
+description: 'Upload the main image used for this article.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg webp'
+  file_directory: articles/hero
+  file_extensions: 'png jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
@@ -32,7 +32,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null

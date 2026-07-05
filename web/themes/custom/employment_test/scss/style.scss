@@ -2,13 +2,17 @@
 @use "base/typography";
 @use "layout/header";
 @use "layout/page";
+
 @use "components/text-block";
 @use "components/text-image";
 @use "components/video-block";
+@use "components/article-card";
+@use "components/office-card";
+@use "components/news-card";
+
 @use "pages/news-overview";
 @use "pages/news-detail";
 @use "pages/offices-overview";
 @use "pages/office-detail";
-@use "components/office-card";
-
-@use "components/news-card";
+@use "pages/article-detail";
+@use "pages/articles-overview";
