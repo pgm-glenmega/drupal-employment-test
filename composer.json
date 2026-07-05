@@ -24,6 +24,7 @@
         "drupal/crop": "^2.6",
         "drupal/focal_point": "^2.1",
         "drupal/paragraphs": "^1.21",
+        "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7"
     },
     "conflict": {
