@@ -1,0 +1,21 @@
+.hello-world-page {
+  display: grid;
+  gap: 1rem;
+  max-width: 48rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.25rem;
+  background: #ffffff;
+}
+
+.hello-world-page h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.hello-world-page p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}

@@ -1,0 +1,7 @@
+employment_test_custom.hello_world:
+  path: '/hello-world'
+  defaults:
+    _controller: '\Drupal\employment_test_custom\Controller\HelloWorldController::content'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
