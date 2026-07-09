@@ -26,6 +26,9 @@
         "drupal/metatag": "^2.2",
         "drupal/paragraphs": "^1.21",
         "drupal/pathauto": "^1.15",
+        "drupal/search_api": "^1.41",
+        "drupal/search_api_autocomplete": "^1.11",
+        "drupal/search_api_db": "^1.41",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7"
     },

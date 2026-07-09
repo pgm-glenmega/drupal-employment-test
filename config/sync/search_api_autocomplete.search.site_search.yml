@@ -1,0 +1,41 @@
+uuid: b261e4d4-aa08-449f-a696-62182ca96a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.site_content
+    - views.view.site_search
+  module:
+    - views
+id: site_search
+label: 'Site search'
+index_id: site_content
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes:
+      'entity:node':
+        article: ''
+        news: ''
+        offices: ''
+        page: ''
+suggester_weights:
+  live_results: 0
+suggester_limits: {  }
+search_settings:
+  'views:site_search':
+    displays:
+      default: false
+      selected:
+        - page_1
+options:
+  limit: 10
+  min_length: 2
+  show_count: false
+  delay: 300
+  submit_button_selector: ':submit'
+  autosubmit: true
