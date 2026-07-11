@@ -17,7 +17,7 @@ bundle: offices
 label: 'Content components'
 description: 'Add and arrange the content components displayed on the Office and news detail page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

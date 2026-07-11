@@ -13,7 +13,7 @@ bundle: article
 label: 'Related offices'
 description: 'Select the offices related to this article.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

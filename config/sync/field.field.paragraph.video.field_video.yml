@@ -13,7 +13,7 @@ bundle: video
 label: Video
 description: 'Select or add a YouTube or Vimeo video.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

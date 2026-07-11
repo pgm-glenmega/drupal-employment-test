@@ -14,7 +14,7 @@ bundle: text_image
 label: Text
 description: 'Enter the formatted text displayed beside the image.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

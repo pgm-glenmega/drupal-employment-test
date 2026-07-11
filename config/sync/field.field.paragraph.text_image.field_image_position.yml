@@ -14,7 +14,7 @@ bundle: text_image
 label: 'Image position'
 description: 'Choose whether the image appears to the left or right of the text.'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: left

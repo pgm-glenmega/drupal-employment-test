@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_office_image
     - node.type.offices
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.offices.field_office_image
 field_name: field_office_image
 entity_type: node
@@ -14,7 +21,7 @@ bundle: offices
 label: 'Office image'
 description: 'Upload the main image used for this office.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

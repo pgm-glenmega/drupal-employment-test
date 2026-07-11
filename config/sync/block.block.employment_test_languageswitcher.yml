@@ -1,0 +1,20 @@
+uuid: d57075f0-6f99-4dd6-9324-b255e649ac69
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - employment_test
+id: employment_test_languageswitcher
+theme: employment_test
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

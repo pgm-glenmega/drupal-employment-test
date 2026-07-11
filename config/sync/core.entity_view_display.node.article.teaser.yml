@@ -51,4 +51,6 @@ content:
 hidden:
   field_content_components: true
   field_related_offices: true
+  langcode: true
   links: true
+  search_api_excerpt: true

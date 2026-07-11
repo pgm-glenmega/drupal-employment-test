@@ -17,7 +17,7 @@ bundle: news
 label: 'Content components'
 description: 'Add and arrange the content components displayed on the News detail page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

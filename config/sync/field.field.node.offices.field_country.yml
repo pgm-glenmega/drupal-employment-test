@@ -13,7 +13,7 @@ bundle: offices
 label: Country
 description: 'Select the country where this office is located.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

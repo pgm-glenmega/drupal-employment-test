@@ -59,4 +59,6 @@ content:
     region: content
 hidden:
   field_teaser: true
+  langcode: true
   links: true
+  search_api_excerpt: true
