@@ -3,25 +3,28 @@
 .view-articles-overview,
 .view-id-articles_overview {
   display: grid;
-  gap: 2rem;
-}
+  gap: $spacing-2xl;
 
-.view-articles-overview .view-content,
-.view-id-articles_overview .view-content {
-  display: grid;
-  gap: 1.5rem;
+  .view-content {
+    display: grid;
+    gap: $spacing-xl;
+  }
 }
 
 @media (min-width: $breakpoint-tablet) {
-  .view-articles-overview .view-content,
-  .view-id-articles_overview .view-content {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .view-articles-overview,
+  .view-id-articles_overview {
+    .view-content {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
-  .view-articles-overview .view-content,
-  .view-id-articles_overview .view-content {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .view-articles-overview,
+  .view-id-articles_overview {
+    .view-content {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 }

@@ -5,6 +5,8 @@
   margin-inline: auto;
 }
 
-.text-block__content > :last-child {
-  margin-bottom: 0;
+.text-block__content {
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

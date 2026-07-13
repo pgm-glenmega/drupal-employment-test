@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .video-block {
   width: 100%;
   max-width: 60rem;
@@ -6,14 +8,18 @@
 
 .video-block__media {
   overflow: hidden;
-  border-radius: 0.5rem;
-  background: #000000;
-}
 
-.video-block__media iframe {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: 0;
+  border-radius: $image-radius;
+
+  background: #000000;
+
+  iframe {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    border: 0;
+  }
 }

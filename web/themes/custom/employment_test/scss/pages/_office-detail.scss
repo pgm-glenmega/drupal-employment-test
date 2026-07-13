@@ -1,48 +1,52 @@
+@use "../abstracts/variables" as *;
+
 .office-detail {
   display: grid;
-  gap: 2rem;
+  gap: $spacing-2xl;
 }
 
 .office-detail__hero {
   overflow: hidden;
-  border-radius: 1.25rem;
-  background: #f3f4f6;
-}
 
-.office-detail__hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+  border-radius: $radius-xl;
+
+  background: $color-surface;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .office-detail__meta {
   display: grid;
-  gap: 0.75rem;
-  padding: 1.25rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  background: #ffffff;
+  gap: $spacing-sm;
+
+  padding: $spacing-lg;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+
+  background: $color-background;
 }
 
 .office-detail__country {
-  font-size: 0.875rem;
-  font-weight: 700;
+  color: $color-text-muted;
+
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #4b5563;
 }
 
 .office-detail__address {
-  font-size: 1.125rem;
-  color: #111827;
+  color: $color-text;
+
+  font-size: $font-size-md;
 }
 
-.office-detail__components {
-  display: grid;
-  gap: 2rem;
-}
-
+.office-detail__components,
 .office-detail__components > .field > .field__items {
   display: grid;
-  gap: 2rem;
+  gap: $spacing-2xl;
 }

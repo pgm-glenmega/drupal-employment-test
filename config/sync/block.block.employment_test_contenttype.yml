@@ -1,0 +1,24 @@
+uuid: 968a1964-227f-46cd-9fd5-25a55c72be30
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type
+  module:
+    - facets
+  theme:
+    - employment_test
+id: employment_test_contenttype
+theme: employment_test
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'facet_block:content_type'
+settings:
+  id: 'facet_block:content_type'
+  label: 'Content type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: employment_test_contenttype
+visibility: {  }

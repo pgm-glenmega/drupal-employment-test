@@ -2,26 +2,32 @@
 
 .text-image {
   display: grid;
-  gap: 1.5rem;
+  gap: $spacing-xl;
   align-items: center;
 }
 
-.text-image__content > :last-child {
-  margin-bottom: 0;
+.text-image__content {
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
-.text-image__media img {
-  width: 100%;
-  border-radius: 0.5rem;
+.text-image__media {
+  img {
+    width: 100%;
+    border-radius: $image-radius;
+  }
 }
 
 @media (min-width: $breakpoint-tablet) {
   .text-image {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem;
+    gap: $spacing-3xl;
   }
 
-  .text-image--left .text-image__media {
-    order: -1;
+  .text-image--left {
+    .text-image__media {
+      order: -1;
+    }
   }
 }

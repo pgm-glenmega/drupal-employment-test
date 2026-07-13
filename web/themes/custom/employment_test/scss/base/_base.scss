@@ -13,11 +13,13 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
+
   color: $color-text;
   background: $color-background;
+
   font-family: $font-family-base;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 img,
@@ -42,9 +44,16 @@ textarea {
 a {
   color: $color-link;
   text-underline-offset: 0.18em;
+  transition: color $transition-fast;
 }
 
 a:hover,
 a:focus-visible {
+  color: $color-link-hover;
   text-decoration-thickness: 0.14em;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid rgba(0, 94, 168, 0.35);
+  outline-offset: 0.1875rem;
 }

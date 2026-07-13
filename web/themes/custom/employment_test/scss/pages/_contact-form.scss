@@ -1,72 +1,84 @@
+@use "../abstracts/variables" as *;
+
 .webform-submission-form {
   display: grid;
-  gap: 1.25rem;
+  gap: $spacing-lg;
+
   max-width: 44rem;
-  padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 1.25rem;
-  background: #ffffff;
-}
+  padding: $spacing-xl;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
 
-.webform-submission-form .form-item {
-  display: grid;
-  gap: 0.5rem;
-  margin: 0;
-}
+  background: $color-background;
 
-.webform-submission-form label {
-  font-weight: 700;
-  color: #111827;
-}
+  .form-item {
+    display: grid;
+    gap: $spacing-xs;
+    margin: 0;
+  }
 
-.webform-submission-form input[type="text"],
-.webform-submission-form input[type="email"],
-.webform-submission-form textarea {
-  width: 100%;
-  padding: 0.75rem 0.875rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.75rem;
-  background: #ffffff;
-  color: #111827;
-  font: inherit;
-}
+  label {
+    color: $color-text;
 
-.webform-submission-form textarea {
-  min-height: 10rem;
-  resize: vertical;
-}
+    font-weight: $font-weight-bold;
+  }
 
-.webform-submission-form input:focus,
-.webform-submission-form textarea:focus {
-  outline: 3px solid #dbeafe;
-  border-color: #2563eb;
-}
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
 
-.webform-submission-form .form-required::after {
-  margin-left: 0.25rem;
-}
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
 
-.webform-submission-form .form-actions {
-  margin: 0;
-}
+    background: $color-background;
+    color: $color-text;
 
-.webform-submission-form .button,
-.webform-submission-form input[type="submit"] {
-  display: inline-flex;
-  justify-content: center;
-  width: fit-content;
-  padding: 0.75rem 1.125rem;
-  border: 0;
-  border-radius: 0.75rem;
-  background: #111827;
-  color: #ffffff;
-  font-weight: 700;
-  cursor: pointer;
-}
+    font: inherit;
+  }
 
-.webform-submission-form .button:hover,
-.webform-submission-form .button:focus,
-.webform-submission-form input[type="submit"]:hover,
-.webform-submission-form input[type="submit"]:focus {
-  background: #374151;
+  textarea {
+    min-height: 10rem;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $color-link;
+    outline: 0.1875rem solid rgba(0, 94, 168, 0.18);
+  }
+
+  .form-required::after {
+    margin-left: $spacing-2xs;
+  }
+
+  .form-actions {
+    margin: 0;
+  }
+
+  .button,
+  input[type="submit"] {
+    display: inline-flex;
+    justify-content: center;
+
+    width: fit-content;
+    padding: $spacing-sm $spacing-md;
+    border: 0;
+    border-radius: $radius-md;
+
+    background: $color-text;
+    color: $color-background;
+
+    font-weight: $font-weight-bold;
+
+    cursor: pointer;
+
+    transition: background-color $transition-fast;
+
+    &:hover,
+    &:focus-visible {
+      background: $color-link;
+    }
+  }
 }

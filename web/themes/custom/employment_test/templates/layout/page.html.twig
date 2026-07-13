@@ -7,72 +7,80 @@
 
 <div class="site">
 
-  <header class="site-header" role="banner">
-    <div class="site-header__inner">
-      {% if page.header %}
-        <div class="site-header__branding">
-          {{ page.header }}
-        </div>
-      {% endif %}
+	<header class="site-header" role="banner">
+		<div class="site-header__inner">
+			{% if page.header %}
+				<div class="site-header__branding">
+					{{ page.header }}
+				</div>
+			{% endif %}
 
-      {% if page.primary_menu %}
-        <div class="site-header__navigation">
-          {{ page.primary_menu }}
-        </div>
-      {% endif %}
-    </div>
-  </header>
+			{% if page.primary_menu %}
+				<div class="site-header__navigation">
+					{{ page.primary_menu }}
+				</div>
+			{% endif %}
+		</div>
+	</header>
 
-  {% if page.highlighted %}
-    <div class="site-notifications">
-      {{ page.highlighted }}
-    </div>
-  {% endif %}
+	{% if page.highlighted %}
+		<div class="site-notifications">
+			{{ page.highlighted }}
+		</div>
+	{% endif %}
 
-  {% if page.help %}
-    <div class="site-help">
-      {{ page.help }}
-    </div>
-  {% endif %}
+	{% if page.help %}
+		<div class="site-help">
+			{{ page.help }}
+		</div>
+	{% endif %}
 
-  {% if page.breadcrumb %}
-    <div class="site-breadcrumbs">
-      {{ page.breadcrumb }}
-    </div>
-  {% endif %}
+	{% if page.breadcrumb %}
+		<div class="site-breadcrumbs">
+			{{ page.breadcrumb }}
+		</div>
+	{% endif %}
 
-  <main class="site-main" role="main">
-    <a id="main-content" tabindex="-1"></a>
+	<main class="site-main" role="main">
+		<a id="main-content" tabindex="-1"></a>
 
-    <div class="site-main__inner">
-      {{ page.content }}
-    </div>
-  </main>
+		<div class="site-main__inner{% if page.sidebar_first %} site-main__inner--with-sidebar{% endif %}">
+			{% if page.sidebar_first %}
+				<aside class="site-sidebar site-sidebar--first" aria-label="Page filters">
+					{{ page.sidebar_first }}
+				</aside>
+			{% endif %}
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <strong>Drupal Employment Test</strong>
-        <p>
-          A Drupal 11 project with structured content, reusable Paragraph components,
-          responsive theming, Webform integration, SEO setup and custom controller functionality.
-        </p>
-      </div>
+			<div class="site-content">
+				{{ page.content }}
+			</div>
+		</div>
+	</main>
 
-      <nav class="site-footer__nav" aria-label="Footer navigation">
-        <a href="/news">News</a>
-        <a href="/offices">Offices</a>
-        <a href="/articles">Articles</a>
-        <a href="/form/contact">Contact</a>
-        <a href="/hello-world">Hello World</a>
-      </nav>
+	<footer class="site-footer" role="contentinfo">
+		<div class="site-footer__inner">
+			<div class="site-footer__brand">
+				<strong>Drupal Employment Test</strong>
+				<p>
+					A Drupal 11 project with structured content, reusable Paragraph components,
+					          responsive theming, Webform integration, SEO setup and custom controller functionality.
+				</p>
+			</div>
 
-      {% if page.footer %}
-        <div class="site-footer__region">
-          {{ page.footer }}
-        </div>
-      {% endif %}
-    </div>
-  </footer>
+			<nav class="site-footer__nav" aria-label="Footer navigation">
+				<a href="/news">News</a>
+				<a href="/offices">Offices</a>
+				<a href="/articles">Articles</a>
+				<a href="/form/contact">Contact</a>
+				<a href="/hello-world">Hello World</a>
+			</nav>
+
+			{% if page.footer %}
+				<div class="site-footer__region">
+					{{ page.footer }}
+				</div>
+			{% endif %}
+		</div>
+	</footer>
 
 </div>

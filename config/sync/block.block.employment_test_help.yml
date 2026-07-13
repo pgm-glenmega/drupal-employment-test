@@ -11,7 +11,7 @@ _core:
 id: employment_test_help
 theme: employment_test
 region: sidebar_first
-weight: -7
+weight: -6
 provider: null
 plugin: help_block
 settings:

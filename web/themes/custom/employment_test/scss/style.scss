@@ -1,7 +1,9 @@
 @use "base/base";
 @use "base/typography";
+
 @use "layout/header";
 @use "layout/page";
+@use "layout/footer";
 
 @use "components/text-block";
 @use "components/text-image";
@@ -20,5 +22,3 @@
 @use "pages/contact-form";
 @use "pages/basic-page";
 @use "pages/hello-world";
-
-@use "layout/footer";

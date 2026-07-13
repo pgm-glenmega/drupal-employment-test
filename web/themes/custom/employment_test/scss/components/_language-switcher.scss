@@ -3,14 +3,16 @@
 .language-switcher-language-url {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
 
   ul {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: $spacing-xs;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
   }
 
@@ -22,35 +24,38 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 2.5rem;
-    padding: 0.45rem 0.8rem;
 
+    min-width: 2.5rem;
+    padding: $spacing-xs $spacing-sm;
     border: 1px solid $color-border;
-    border-radius: 999px;
+    border-radius: $radius-pill;
 
     background: $color-background;
     color: $color-text;
 
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
     text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 600;
 
-    transition: 0.2s ease;
-  }
+    transition:
+      background-color $transition-fast,
+      border-color $transition-fast,
+      color $transition-fast;
 
-  a:hover,
-  a:focus {
-    background: $color-surface;
-    border-color: $color-link;
-    color: $color-link;
+    &:hover,
+    &:focus-visible {
+      border-color: $color-link;
+
+      background: $color-surface;
+      color: $color-link;
+    }
   }
 
   .is-active a,
-  .is-active {
-    a {
-      background: $color-link;
-      border-color: $color-link;
-      color: white;
-    }
+  a.is-active {
+    border-color: $color-link;
+
+    background: $color-link;
+    color: $color-background;
   }
 }

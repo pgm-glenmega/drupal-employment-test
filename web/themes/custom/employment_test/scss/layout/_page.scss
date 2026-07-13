@@ -1,5 +1,13 @@
 @use "../abstracts/variables" as *;
 
+@mixin container-width($padding) {
+  width: min(
+    calc(100% - (2 * #{$padding})),
+    $container-max-width
+  );
+  margin-inline: auto;
+}
+
 .site {
   display: flex;
   min-height: 100vh;
@@ -8,7 +16,7 @@
 
 .site-main {
   flex: 1;
-  padding-block: 3rem;
+  padding-block: $spacing-3xl;
 }
 
 .site-header__inner,
@@ -17,11 +25,84 @@
 .site-breadcrumbs,
 .site-main__inner,
 .site-footer__inner {
-  width: min(
-    calc(100% - (2 * #{$container-padding-mobile})),
-    $container-max-width
-  );
-  margin-inline: auto;
+  @include container-width($container-padding-mobile);
+}
+
+.site-main__inner--with-sidebar {
+  display: grid;
+  grid-template-columns: $sidebar-width minmax(0, 1fr);
+  gap: $spacing-2xl;
+  align-items: start;
+}
+
+.site-content {
+  min-width: 0;
+}
+
+.site-sidebar {
+  position: sticky;
+  top: $sidebar-sticky-top;
+
+  padding: $spacing-lg;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+
+  background: $color-background;
+  box-shadow: $shadow-soft;
+
+  h2 {
+    margin: 0 0 $spacing-md;
+    font-size: $font-size-base;
+  }
+
+  .block {
+    margin-bottom: $spacing-xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: $spacing-xs;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-sm;
+
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-pill;
+
+    color: $color-text;
+    text-decoration: none;
+    font-weight: $font-weight-semibold;
+
+    transition:
+      color $transition-fast,
+      background-color $transition-fast;
+
+    &:hover,
+    &:focus-visible {
+      background: $color-surface;
+      color: $color-link;
+    }
+
+    &.is-active {
+      background: $color-link;
+      color: $color-background;
+    }
+  }
+
+  .is-active a {
+    background: $color-link;
+    color: $color-background;
+  }
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -31,13 +112,20 @@
   .site-breadcrumbs,
   .site-main__inner,
   .site-footer__inner {
-    width: min(
-      calc(100% - (2 * #{$container-padding-desktop})),
-      $container-max-width
-    );
+    @include container-width($container-padding-desktop);
   }
 
   .site-main {
-    padding-block: 5rem;
+    padding-block: $spacing-4xl;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .site-main__inner--with-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .site-sidebar {
+    position: static;
   }
 }
