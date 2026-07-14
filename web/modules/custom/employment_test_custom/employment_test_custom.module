@@ -3,10 +3,17 @@
 /**
  * Implements hook_views_query_alter().
  *
- * Keeps the Search API search page in the current page language.
+ * Keeps selected public Views in the current page/content language.
  */
 function employment_test_custom_views_query_alter(\Drupal\views\ViewExecutable $view, \Drupal\views\Plugin\views\query\QueryPluginBase $query): void {
-  if ($view->id() !== 'site_search' || $view->current_display !== 'page_1') {
+  $language_aware_views = [
+    'site_search',
+    'news_overview',
+    'offices_overview',
+    'articles_overview',
+  ];
+
+  if (!in_array($view->id(), $language_aware_views, true)) {
     return;
   }
 
@@ -18,5 +25,10 @@ function employment_test_custom_views_query_alter(\Drupal\views\ViewExecutable $
     ->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)
     ->getId();
 
-  $query->addWhere(0, 'langcode', $langcode, '=');
+  if ($view->id() === 'site_search') {
+    $query->addWhere(0, 'langcode', $langcode, '=');
+    return;
+  }
+
+  $query->addWhere(0, 'node_field_data.langcode', $langcode, '=');
 }
